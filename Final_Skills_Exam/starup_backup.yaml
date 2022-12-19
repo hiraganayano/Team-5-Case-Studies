@@ -1,0 +1,17 @@
+---
+- name: AUTOMATIC BACKUP OF STARTUP-CONFIG
+  hosts: Grp5-SkillsExam
+  gather_facts: false
+  connection: local
+ 
+  tasks:
+   - name: DISPLAYING THE STARTUP-CONFIG
+     ios_command:
+       commands:
+         - show startup-config
+     register: config
+ 
+   - name: SAVE OUTPUT TO ./backups/
+     copy:
+       content: "{{ config.stdout[0] }}"
+       dest: "backups/show_start_{{ inventory_hostname }}.txt"

@@ -1,0 +1,35 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: darkcyan;
+}
+button{
+    background-color: brown;
+    width: 100%;
+    padding: 15px 0px;
+    margin: 10%;
+    border: none;
+    cursor: pointer;
+}
+form {
+    border: 3px silver;
+}
+input[type=text], input[type=password]{
+        width: 100%;
+        margin: 8px 0px;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 2px saddlebrown;
+        box-sizing: border-box;
+    }
+button:hover{
+    opacity: 0.5;
+}
+.registerbtn{
+    width:auto;
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+.container{
+    padding: 25px;
+    background-color: antiquewhite;
+}
